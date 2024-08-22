@@ -1,22 +1,22 @@
-PROG = dist/main
+PROG = bin/autocompletar
 CC = g++
 CPPFLAGS = -O0 -g -std=c++11 -Wall -pedantic
-OBJS = dist/main.o dist/Autocomplete.o dist/Term.o
+OBJS = bin/main.o bin/Autocomplete.o bin/Term.o
 
 $(PROG): $(OBJS)
 	$(CC) -o $(PROG) $(OBJS)
 
-dist/main.o: src/main.cpp
-	mkdir -p dist
-	$(CC) $(CPPFLAGS) -c src/main.cpp -o dist/main.o
+bin/main.o: src/main.cpp
+	mkdir -p bin
+	$(CC) $(CPPFLAGS) -c src/main.cpp -o bin/main.o
 
-dist/Autocomplete.o: src/classes/autocomplete/Autocomplete.cpp src/classes/autocomplete/Autocomplete.h
-	mkdir -p dist
-	$(CC) $(CPPFLAGS) -c src/classes/autocomplete/Autocomplete.cpp -o dist/Autocomplete.o
+bin/Autocomplete.o: src/classes/autocomplete/Autocomplete.cpp src/classes/autocomplete/Autocomplete.h
+	mkdir -p bin
+	$(CC) $(CPPFLAGS) -c src/classes/autocomplete/Autocomplete.cpp -o bin/Autocomplete.o
 
-dist/Term.o: src/classes/term/Term.cpp src/classes/term/Term.h
-	mkdir -p dist
-	$(CC) $(CPPFLAGS) -c src/classes/term/Term.cpp -o dist/Term.o
+bin/Term.o: src/classes/term/Term.cpp src/classes/term/Term.h
+	mkdir -p bin
+	$(CC) $(CPPFLAGS) -c src/classes/term/Term.cpp -o bin/Term.o
 
 
 clean:
