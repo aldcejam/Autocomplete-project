@@ -164,11 +164,3 @@ Abaixo seguem alguns passos de "alto nível" que podem ser usados por você para
     [5.b] Se uma quantidade maior a `k` de termos forem encontrados, mostre os `k` primeiros (com os maiores pesos).
 [6] Volte ao passo (2)
 ```
-
-## Extra (opcional) - 1,0 Ponto
-
-Implemente uma GUI (_graphical user interface_) interativa que auto-complete as consultas do usuário em tempo de digitação! É uma ótima oportunidade para aprender sobre interfaces gráficas em C++!
-
-Veja um exemplo para um _dataset_ de cidades do mundo:
-
-![alt text](public/image-1.png)
